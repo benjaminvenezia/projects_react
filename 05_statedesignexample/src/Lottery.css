@@ -1,0 +1,44 @@
+.Lottery {
+    position: relative;
+    width: 80%;
+    margin: 20px auto;
+    border: 2px solid gray;
+    padding: 2% 0;
+    text-align: center;
+}
+
+.Lottery-container {
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    justify-content: space-evenly;
+}
+
+.Lottery h1 {
+    font-size: large;
+}
+
+.Lottery-button {
+    padding: 5px 60px;
+    background-color: purple;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.Lottery-infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(161, 161, 161);
+    border-bottom-right-radius: 50px;
+    color: white;
+    width: 200px;
+}
+
+.Lottery-button:hover {
+    cursor: pointer;
+    background-color: rgb(139, 0, 182);
+}
