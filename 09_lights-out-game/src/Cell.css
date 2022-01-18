@@ -1,9 +1,14 @@
 .Cell {
   height: 100px;
   width: 100px;
-  background-color: darkgray;
+  cursor: pointer;
+  background-color: rgb(2, 0, 116);
+}
+.Cell:hover{
+  opacity: .6;
 }
 
 .Cell-lit {
-  background-color: white;
+  transition: .75s;
+  background-color: rgb(255, 234, 46);
 }

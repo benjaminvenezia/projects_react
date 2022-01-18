@@ -1,3 +1,12 @@
 .Board {
   margin: 0 auto;
 }
+.Board-button {
+  padding: 20px 50px;
+  border: 0;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  background-color: gold;
+  cursor: pointer;
+}

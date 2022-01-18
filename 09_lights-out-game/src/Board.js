@@ -141,18 +141,20 @@ class Board extends Component {
     const winMsg = (
       <div>
         <h1>You win!</h1>
-        <button onClick={this.reset}>Restart ?</button>
+        <button className="Board-button" onClick={this.reset}>Restart ?</button>
       </div>
     )
 
     // TODO
     return (
-      <table className="Board">
-        <tbody>
-          {!this.state.hasWon ? boardGame : winMsg}
-    
-        </tbody>
-      </table>
+      <div>
+        {!this.state.hasWon && <h1>Lightout game</h1>}
+        <table className="Board">
+          <tbody>
+            {!this.state.hasWon ? boardGame : winMsg}
+          </tbody>
+        </table>
+      </div>
     )
   }
 }
