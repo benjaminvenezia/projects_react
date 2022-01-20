@@ -101,7 +101,6 @@ class Hangman extends Component {
         </div>
 
         <p>Life : { this.props.maxWrong - this.state.nWrong}</p>
-        {}
         <button id="reset" onClick={this.reset}>Restart?</button>
 
       </div>

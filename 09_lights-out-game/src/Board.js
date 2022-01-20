@@ -37,7 +37,7 @@ class Board extends Component {
   static defaultProps = {
     nrows : 5,
     ncols : 5,
-    chanceLightStartsOn: 0.5,
+    chanceLightStartsOn: 0.25,
   }
 
   constructor(props) {
@@ -94,7 +94,7 @@ class Board extends Component {
     function flipCell(y, x) {
       // if this coord is actually on board, flip it
       if (x >= 0 && x < ncols && y >= 0 && y < nrows) {
-        board[y][x] = !board[y][x];
+        board[y][x] = !board[y][x]; //false become true and true false
       }
     }
 
@@ -107,19 +107,21 @@ class Board extends Component {
 
     // win when every cell is turned off
     // TODO: determine is the game has been won
-    let oneCellIsTrue = false;
+    // let oneCellIsTrue = false;
 
-    for(let i = 0; i < board.length; i++) {
-      for(let j = 0; j < board.length; j++) {
-        if(board[i][j]) {
-          oneCellIsTrue = true;
-        }
-      }
-    }
+    // for(let i = 0; i < board.length; i++) {
+    //   for(let j = 0; j < board.length; j++) {
+    //     if(board[i][j]) {
+    //       oneCellIsTrue = true;
+    //     }
+    //   }
+    // }
+
+    let hasWon = board.every( row => row.every(cell => !cell));
 
     this.setState({
       board, 
-      hasWon: oneCellIsTrue ? false : true
+      hasWon: hasWon
     });
   }
 
@@ -134,15 +136,15 @@ class Board extends Component {
     // TODO
 
     // make table board
-    const boardGame = this.state.board.map((arr, i) => {
-    return <tr>{arr.map((b, j) => <Cell isLit={b} flipCellsAroundMe={this.flipCellsAround} key={`${i}-${j}`} coords={`${i}-${j}`}/>)}</tr>
+    const boardGame = this.state.board.map((arr, i) => {                              //v----- arrow function allow add args
+    return <tr key={`row-${i}`}>{arr.map((b, j) => <Cell isLit={b} flipCellsAroundMe={() => this.flipCellsAround(`${i}-${j}`)} key={`${i}-${j}`} />)}</tr>
     })
 
     const winMsg = (
-      <div>
+      <span>
         <h1>You win!</h1>
         <button className="Board-button" onClick={this.reset}>Restart ?</button>
-      </div>
+      </span>
     )
 
     // TODO
