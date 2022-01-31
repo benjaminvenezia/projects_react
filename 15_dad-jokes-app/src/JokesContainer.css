@@ -1,0 +1,47 @@
+.JokesContainer {
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+}
+
+.JokesContainer-header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(144, 78, 182);
+    min-width: 300px;
+    max-width: 300px;
+    
+}
+
+.JokesContainer-header button{
+    width: 100px;
+    align-self: center;
+    padding: 10px 80px;
+    margin: 10px;
+    cursor: pointer;
+   border-radius: 30px;
+   border: none;
+}
+
+.JokesContainer-header img{
+    width: 150px;
+    align-self: center;
+    
+}
+
+.JokesContainer-content {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (max-width: 800px) {
+ 
+    .JokesContainer-header {
+        background-color: rgb(144, 78, 182);
+        min-width: 200px;
+        max-width: 200px;
+    }
+  }
+
+  

@@ -1,0 +1,30 @@
+.Joke {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 1px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+.Joke-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+}
+
+.Joke-smiley {
+    font-size: 20px;
+}
+
+.Joke-text {
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.719);
+}
+
+@media screen and (max-width: 800px) {
+    .Joke-container {
+       
+        flex-direction: column-reverse;
+      
+    }
+  }
