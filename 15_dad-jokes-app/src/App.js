@@ -1,10 +1,10 @@
 import './App.css';
-import JokesContainer from './JokesContainer';
+import JokeList from './JokeList';
 
 function App() {
   return (
     <div className="App">
-      <JokesContainer nbJokes={1}/>
+      <JokeList nbJokes={1}/>
     </div>
   );
 }
